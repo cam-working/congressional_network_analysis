@@ -2,4 +2,4 @@
 This is the repository for my final project for Social Network Analysis (PPOL 602) at Georgetown University, Spring Session 2023. The goal of the project is to create a dynamic network model for congress in the 21st century. 
 
 ## Step 1
-First, we will scrape the congressional website using selenium. While there is a congressional api, it does not provide the sufficient level of detail for bill sponsorship and cosponsorhip (specifically the dates associated with these actions). While BeautifulSoup was considered as an alternative, it appears that the website has put restrictions in place to prevent scraping. If the selenium scraping doesn't work, the API will be reconsidered and BeatifulSoup workarounds will be reconsidered. 
+First we will use the congress api to generate an edgelist. Specifically, we will first gather all members of the congress available on the api. Next, we will remove congresspeople who did not serve after 2013. Then we will collect all legislation that each member sponsored (again removing all legislation from before 2013). After this we will search for cosponsors for each bill. 
